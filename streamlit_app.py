@@ -1,6 +1,4 @@
 import streamlit as st
-
-const user_input
 user_input=st.text_input("Entrer la largeur du petale:)
 user_input=st.text_input("Entrer la longueur du petale:")
 user_input=st.text_input("Entrer la largeur du sepale:")
