@@ -1,5 +1,6 @@
 import streamlit as st
 def main()
+const user_input
 user_input=st.text_area("Entrer la largeur du petale:)
 user_input=st.text_area("Entrer la longueur du petale:")
 user_input=st.text_area("Entrer la largeur du sepale:")
