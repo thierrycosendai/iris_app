@@ -15,6 +15,7 @@ def load_model():
         model = pickle.load(file)
     return model
 model = load_model()
+
 # Titre de l'application
 st.title("Formulaire d'Utilisation des Données Iris")
 st.sidebar.header("Entrée des caractéristiques")
@@ -22,6 +23,7 @@ sepal_length = st.sidebar.number_input("Longueur du sépale (cm)", min_value=0.0
 sepal_width = st.sidebar.number_input("Largeur du sépale (cm)", min_value=0.0, max_value=10.0, step=0.1)
 petal_length = st.sidebar.number_input("Longueur du pétale (cm)", min_value=0.0, max_value=10.0, step=0.1)
 petal_width = st.sidebar.number_input("Largeur du pétale (cm)", min_value=0.0, max_value=10.0, step=0.1)
+
 if st.sidebar.button("Prédire"):
     input_data = [[sepal_length, sepal_width, petal_length, petal_width]]
     prediction = model.predict(input_data)[0]
