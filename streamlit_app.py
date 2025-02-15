@@ -27,7 +27,7 @@ if submit:
 st.sidebar.header("Options d'affichage des données")
 if st.sidebar.checkbox("Afficher les données brutes"):
     st.subheader("Aperçu des Données")
-    st.write(data.head())
+    #st.write(data.head())
 
 # Sélection de la variable pour l'analyse
 selected_column = st.sidebar.selectbox("Sélectionnez une colonne pour l'analyse", data.columns[:-1])
