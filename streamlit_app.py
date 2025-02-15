@@ -3,11 +3,6 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pylot as plt
 
-import streamlit as st
-import pandas as pd
-import seaborn as sns
-import matplotlib.pyplot as plt
-
 # Charger les données
 @st.cache
 #def load_data():
@@ -20,10 +15,10 @@ st.title("Formulaire d'Utilisation des Données Iris")
 
 # Formulaire utilisateur
 st.sidebar.header("Formulaire")
-name = st.sidebar.text_input("Votre nom")
-age = st.sidebar.number_input("Votre âge", min_value=1, max_value=100, step=1)
-feedback = st.sidebar.text_area("Votre avis sur l'application")
-submit = st.sidebar.button("Soumettre")
+#name = st.sidebar.text_input("Votre nom")
+#age = st.sidebar.number_input("Votre âge", min_value=1, max_value=100, step=1)
+#feedback = st.sidebar.text_area("Votre avis sur l'application")
+#submit = st.sidebar.button("Soumettre")
 
 if submit:
     st.sidebar.success(f"Merci {name}, votre avis a été enregistré !")
