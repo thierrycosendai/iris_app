@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 
 # Charger les données
 @st.cache
-def load_data():
+#def load_data():
     return pd.read_csv("iris.csv")
 
 data = load_data()
