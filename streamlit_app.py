@@ -30,7 +30,7 @@ if st.sidebar.checkbox("Afficher les données brutes"):
     #st.write(data.head())
 
 # Sélection de la variable pour l'analyse
-selected_column = st.sidebar.selectbox("Sélectionnez une colonne pour l'analyse", data.columns[:-1])
+#selected_column = st.sidebar.selectbox("Sélectionnez une colonne pour l'analyse", data.columns[:-1])
 
 # Affichage de statistiques descriptives
 st.subheader(f"Statistiques de {selected_column}")
