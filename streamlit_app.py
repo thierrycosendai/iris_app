@@ -15,7 +15,6 @@ def load_model():
         model = pickle.load(file)
     return model
 model = load_model()
-
 # Titre de l'application
 st.title("Formulaire d'Utilisation des Données Iris")
 st.sidebar.header("Entrée des caractéristiques")
