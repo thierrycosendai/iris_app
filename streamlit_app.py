@@ -19,6 +19,4 @@ if st.button("Prediction sur la fleur", help="Cliquez pour envoyer les donnees",
     prediction = model.predict(X_transform)
     
     response = prediction[0]
-
- 
     st.write("fleur est: ", response)
