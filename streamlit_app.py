@@ -1,16 +1,24 @@
-import streamlit as st 
-import requests
-import joblibimport numpy as np
-import pandas as pd
-import os
 
-# Titre de l'application
-st.title("Prédiction des espèces d'Iris")
+import numpy as np
+import pandas as pd ;
+import joblib
 
-# Formulaire de saisie des caractéristiques
-st.sidebar.header("Entrée des caractéristiques")
-sepal_length88 if= st.sidebar.number_input("Longueur du sépale (cm)", min_value=0.0, max_value=10.0, step=0.1)
-sepal_width = st.sidebar.number_input("Largeur du sépale (cm)", min_value=0.0, max_value=10.0, step=0.1)
-petal_length = st.sidebar.number_input("Longueur du pétale (cm)", min_value=0.0, max_value=10.0, step=0.1)
-petal_width = st.sidebar.number_input("Largeur du pétale (cm)", min_value=0.0, max_value=10.0, step=0.1)
+PetalLength =st.slider("PetalLength", 0.0, 10.0, value=2.0, step=0.1)
+SepalLength = st.slider("SepalLength", 0.0, 10.0, value=0.2, step=0.1)
+PetalWidth =st.slider("PetalWidth ", 0.0, 10.0, value=2.0, step=0.1)
+SepalWidth = st.slider("SepalWidth", 0.0, 10.0, value=0.3, step=0.1)
+      
+if st.button("Prediction sur la fleur", help="Cliquez pour envoyer les donnees", type="primary"): 
+    model= joblib.load("mon_model2.pkl")
+    scaler= joblib.load("mon_scaler.pkl")
+    
+    f = np.array([[SepalLength, SepalWidth, PetalLength, PetalWidth]])
+    X = pd.DataFrame(f,columns=['SepalLength', 'SepalWidth', 'PetalLength', 'PetalWidth'])
+    
+    X_transform = scaler.transform(X)
+    prediction = model.predict(X_transform)
+    
+    response = prediction[0]
 
+ 
+    st.write("fleur est: ", response)
