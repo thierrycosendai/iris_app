@@ -2,7 +2,7 @@ import streamlit as st
 import numpy as np
 import pandas as pd ;
 import joblib
-
+st.title("PREDICTION DE L'ESPECE D'IRIS")
 PetalLength =st.slider("PetalLength", 0.0, 10.0, value=2.0, step=0.1)
 SepalLength = st.slider("SepalLength", 0.0, 10.0, value=0.2, step=0.1)
 PetalWidth =st.slider("PetalWidth ", 0.0, 10.0, value=2.0, step=0.1)
