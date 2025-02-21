@@ -13,10 +13,9 @@ if st.button("Prediction sur la fleur", help="Cliquez pour envoyer les donnees",
     scaler= joblib.load("mon_scaler.pkl")
     
     f = np.array([[SepalLength, SepalWidth, PetalLength, PetalWidth]])
-    X = pd.DataFrame(f,columns=['SepalLength', 'SepalWidth', 'PetalLength', 'PetalWidth'])
+    X = pd.DataFrame(f,columns=["SepalLength", "SepalWidth", "PetalLength", "PetalWidth"])
     
     X_transform = scaler.transform(X)
     prediction = model.predict(X_transform)
-    
     response = prediction[0]
     st.write("fleur est: ", response)
